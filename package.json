@@ -1,6 +1,6 @@
 {
   "name": "kitsu-missing-enddates",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI tool to aid with database maintenance",
   "main": "cli.mjs",
   "repository": "https://github.com/wopian/kitsu-missing-enddates.git",
