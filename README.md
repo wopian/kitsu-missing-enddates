@@ -42,6 +42,10 @@ Returns only NSFW entries (useful if you've previously run the CLI without loggi
 
 ### Allowing NSFW entries
 
-1. Copy `env.template.mjs` to `env.mjs`
-2. Add your username (email or [slug/profile URL](https://kitsu.io/settings/profile)) and password
-3. Run the CLI
+Skip to 3. if running locally with `yarn start`
+
+1. Run `yarn global dir` or `npm root -g` and navigate to the directory returned
+2. Navigate to `node_modules/kitsu-missing-enddates`
+3. Copy `env.template.mjs` to `env.mjs`
+4. Add your username (email or [slug/profile URL](https://kitsu.io/settings/profile)) and password
+5. Run the CLI
