@@ -11,14 +11,11 @@ yarn global add kitsu-missing-enddates
 npm install -g kitsu-missing-enddates
 ```
 
-Note: `npx kitsu-missing-enddates` is recommended over `npm install -g kitsu-missing-enddates` for npm 5.2 and above
-
 ### Command
 
 ```
 kmed [--subtype] [--onlyNSFW]
 kitsu-missing-enddates [--subtype] [--onlyNSFW]
-npx kitsu-missing-enddates [--subtype] [--onlyNSFW]
 ```
 
 ### Parameters
