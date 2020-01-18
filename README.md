@@ -45,3 +45,6 @@ Returns only NSFW entries (useful if you've previously run the CLI without loggi
 
 ### Allowing NSFW entries
 
+1. Copy `env.template.mjs` to `env.mjs`
+2. Add your username (email or [slug/profile URL](https://kitsu.io/settings/profile)) and password
+3. Run the CLI
