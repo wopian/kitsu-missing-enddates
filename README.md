@@ -36,8 +36,6 @@ Possible values:
 
 #### onlyNSFW (Boolean, alias 'o')
 
-Defaults to `false`
-
 Returns only NSFW entries (useful if you've previously run the CLI without logging in)
 
 ### Allowing NSFW entries
