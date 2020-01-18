@@ -1,17 +1,24 @@
 {
   "name": "kitsu-missing-enddates",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "CLI tool to aid with database maintenance",
-  "main": "index.mjs",
+  "main": "cli.mjs",
   "repository": "https://github.com/wopian/kitsu-missing-enddates.git",
   "author": "James Harris <wopian@wopian.me>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.mjs"
+    "start": "node cli.mjs"
   },
   "dependencies": {
     "axios": "~0.19.1",
     "kitsu": "~8.0.4",
     "minimist": "~1.2.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bin": {
+    "kitsu-missing-enddates": "./cli.mjs",
+    "kmed": "./cli.mjs"
   }
 }

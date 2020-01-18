@@ -4,30 +4,28 @@ A CLI tool to aid with database maintenance
 
 ## Usage
 
-### Commands
+### Install
 
-Note: Replace `yarn` with `npm run` if you do not use Yarn.
-
-**Default (all subtypes)**
 ```
-yarn start
+yarn global add kitsu-missing-enddates
+npm install -g kitsu-missing-enddates
 ```
 
-**Specific subtypes**
-```
-yarn start --subtype tv
-yarn start -s tv
-```
+Note: `npx kitsu-missing-enddates` is recommended over `npm install -g kitsu-missing-enddates` for npm 5.2 and above
 
-**Only include NSFW entries**
+### Command
+
 ```
-yarn start --onlyNSFW
-yarn start -o
+kmed [--subtype] [--onlyNSFW]
+kitsu-missing-enddates [--subtype] [--onlyNSFW]
+npx kitsu-missing-enddates [--subtype] [--onlyNSFW]
 ```
 
 ### Parameters
 
 #### subtype (String, alias `s`)
+
+Defaults to `tv,ona,ova,movie,music,special`
 
 Seperate multiple subtypes by commas (e.g `--subtype tv,ona`)
 
@@ -40,6 +38,8 @@ Possible values:
 - `special`
 
 #### onlyNSFW (Boolean, alias 'o')
+
+Defaults to `false`
 
 Returns only NSFW entries (useful if you've previously run the CLI without logging in)
 

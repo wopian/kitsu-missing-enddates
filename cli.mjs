@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import Kitsu from 'kitsu'
 import axios from 'axios'
 import parseArgs from 'minimist'
