@@ -10,22 +10,23 @@ const processedData = []
 const api = new Kitsu()
 const args = parseArgs(process.argv, {
   string: 'subtype',
-  boolean: 'onlyNSFW',
+  boolean: [ 'onlyNSFW', 'noStart' ],
   alias: {
     s: 'subtype',
-    o: 'onlyNSFW'
+    o: 'onlyNSFW',
+    n: 'noStart'
   }
 })
 
-const getAiring = async (offset, subtype) => await api.get('anime', {
-  filter: { status: 'current,upcoming', subtype },
+const getAiring = async (offset, subtype, noStart) => await api.get('anime', {
+  filter: { status: noStart ? 'tba' : 'current,upcoming', subtype },
   fields: { anime: 'canonicalTitle,endDate,episodeLength,episodeCount,nsfw' },
   page: { offset, limit: LIMIT },
   sort: 'createdAt'
 })
 
-const getAllPages = async (offset, subtype = 'tv,ona,ova,movie,music,special', onlyNSFW) => {
-  const { data, links } = await getAiring(offset, subtype)
+const getAllPages = async (offset, subtype = 'tv,ona,ova,movie,music,special', onlyNSFW, noStart) => {
+  const { data, links } = await getAiring(offset, subtype, noStart)
   const noEndDatesOnly = data.filter(({ endDate, nsfw }) => {
     if (onlyNSFW && (false === nsfw)) return false
     if (null === endDate) return true
@@ -36,7 +37,7 @@ const getAllPages = async (offset, subtype = 'tv,ona,ova,movie,music,special', o
   processedData.push(...noEndDatesOnly)
 
   if (links && links.next) {
-    await getAllPages(offset + LIMIT, subtype, onlyNSFW)
+    await getAllPages(offset + LIMIT, subtype, onlyNSFW, noStart)
   }
 }
 
@@ -72,7 +73,7 @@ const run = async args => {
     }
   }
 
-  await getAllPages(0, args.subtype, args.onlyNSFW)
+  await getAllPages(0, args.subtype, args.onlyNSFW, args.noStart)
   await logProcessedData()
 }
 

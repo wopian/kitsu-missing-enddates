@@ -14,8 +14,8 @@ npm install -g kitsu-missing-enddates
 ### Command
 
 ```
-kmed [--subtype] [--onlyNSFW]
-kitsu-missing-enddates [--subtype] [--onlyNSFW]
+kmed [--subtype] [--onlyNSFW] [--noStart]
+kitsu-missing-enddates [--subtype] [--onlyNSFW] [--noStart]
 ```
 
 ### Parameters
@@ -34,9 +34,13 @@ Possible values:
 - `music`
 - `special`
 
-#### onlyNSFW (Boolean, alias 'o')
+#### onlyNSFW (Boolean, alias `o`)
 
 Returns only NSFW entries (useful if you've previously run the CLI without logging in)
+
+#### noStart (Boolean, alias `n`)
+
+Returns entries without an end date **AND** a start date
 
 ### Allowing NSFW entries
 
