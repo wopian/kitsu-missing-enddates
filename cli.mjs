@@ -18,7 +18,7 @@ const args = parseArgs(process.argv, {
 })
 
 const getAiring = async (offset, subtype) => await api.get('anime', {
-  filter: { status: 'current', subtype },
+  filter: { status: 'current,upcoming', subtype },
   fields: { anime: 'canonicalTitle,endDate,episodeLength,episodeCount,nsfw' },
   page: { offset, limit: LIMIT },
   sort: 'createdAt'
