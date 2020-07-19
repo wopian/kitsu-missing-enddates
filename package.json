@@ -20,5 +20,10 @@
   "bin": {
     "kitsu-missing-enddates": "./cli.mjs",
     "kmed": "./cli.mjs"
+  },
+  "renovate": {
+    "extends": [
+      "@wopian"
+    ]
   }
 }
