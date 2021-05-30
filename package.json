@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "axios": "~0.21.1",
-    "kitsu": "~9.1.0",
+    "kitsu": "~9.1.16",
     "minimist": "~1.2.0"
   },
   "engines": {
