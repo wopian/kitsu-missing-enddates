@@ -10,7 +10,7 @@
     "start": "node cli.mjs"
   },
   "dependencies": {
-    "axios": "~0.21.1",
+    "axios": "~0.21.3",
     "kitsu": "~9.1.16",
     "minimist": "~1.2.0"
   },
